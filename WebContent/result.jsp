@@ -6,12 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <jsp:include page="_style.jsp"></jsp:include>
-<title>Simple Query Result</title>
+<title>Select Query Result</title>
 </head>
 <body>
 <jsp:include page="_navbar.jsp"></jsp:include>
-<div class="container-fluid">
 <div class="body">
+<div class="container-fluid">
+
 
 	<table id="query" class="table">
 		<c:forEach var="results" items="${arrayList }">
