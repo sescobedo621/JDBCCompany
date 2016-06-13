@@ -27,6 +27,12 @@ body{
 	postiion: fixed;
 	display: block;
 }
+#updateBeg a{
+	color: white;
+}
+#employeesPic{
+	height: 50px;
+}
 #delete{
 	margin-top: 0px;
 	padding-top: 5px;
@@ -35,6 +41,7 @@ body{
 #delete input[type="submit"]{
 	margin-top: 0px;
 }
+
 #employeelink a{
 	text-decoration: none;
 	font-weight: bolder;
@@ -42,7 +49,4 @@ body{
 }
 #employeelink a:hover{
 	color: #ff3333;
-}
-#employeelink a:visited{
-	color: blue;
-}
+}	

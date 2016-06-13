@@ -5,24 +5,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="normalize.css">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<jsp:include page="_style.jsp"></jsp:include>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Employee</title>
+<title>${employee.firstName } ${employee.lastName }</title>
 </head>
 <body>
-	<jsp:include page="navbar.jsp"></jsp:include>
-	<div class="body">
-		<h3>${employee.firstName} ${employee.middleName}
-			${employee.lastName}</h3>
+<header>
+	<jsp:include page="_navbar.jsp"></jsp:include>
+</header>
+<div class="body">
+<div class="container-fluid">
+<div class="page-header">
+<h3>${employee.firstName} ${employee.middleName} ${employee.lastName}</h3>
+</div>
+<div class="row">
+<div class="col-md-4">
+<img src="imgs/employees.jpg" class="img-responsive">
+</div>
+<div class="col-md-8">
 		<p>
-			Salary:
+			<label>Salary:</label>
 			<fmt:formatNumber value="${employee.salary}" type="currency" />
 		</p>
 		<p>
-			Address: <address>${employee.address}<br> ${employee.city},
+			<label>Address:</label> <address>${employee.address}<br> ${employee.city},
 			${employee.state} ${employee.zipcode}</address>
 		</p>
+</div>
 	</div>
+	</div>
+</div>
 </body>
 </html>

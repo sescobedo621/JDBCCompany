@@ -16,9 +16,8 @@
        <div class="mask rgba-black-light">
         <div class="container">
             <div class="verticalcenter text-center white-text">
-                <h1>companyRolodex</h1>
-                <h2>MySQL GUI</h2>
-                <h5>Update GUI</h5>
+                <h1>MySQL GUI</h1>
+                <h2>Insert/Update/Delete Queries</h2>
                 <!--Call to action buttons-->
                 <a href="sql.do" class="btn btn-primary waves-effect waves-light">Select Queries</a>
                 <a href="#update" class="btn btn-success waves-effect waves-light">Update/Insert/Delete</a>

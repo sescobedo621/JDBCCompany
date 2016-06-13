@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, user-scalable=no">
 <nav class="navbar navbar-primary bg-primary">
 <div class="container-fluid">
 	<div class= "navbar-header">
@@ -9,7 +10,7 @@
       </button>
       <a class="navbar-brand" href="index.jsp">companyRolodex</a>
 	</div>
-	<div class="collaps navbar-collapse">
+	<div class="collaps navbar-collapse" id="bs-example-navbar-collapse-1">
 	<ul class= "nav navbar-nav">
 		<li><a href="allEmployees.do">List All Employees</a></li>
 		<li><a href="addEmployee.do">Add Employee</a></li>
