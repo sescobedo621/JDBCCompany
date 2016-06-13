@@ -19,10 +19,10 @@
 <h3>${employee.firstName} ${employee.middleName} ${employee.lastName}</h3>
 </div>
 <div class="row">
-<div class="col-md-4">
+<div class="col-sm-4">
 <img src="imgs/employees.jpg" class="img-responsive">
 </div>
-<div class="col-md-8">
+<div class="col-sm-8">
 		<p>
 			<label>Salary:</label>
 			<fmt:formatNumber value="${employee.salary}" type="currency" />
