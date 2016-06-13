@@ -5,14 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="normalize.css">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<jsp:include page="_style.jsp"></jsp:include>
 <title>Simple Query Result</title>
 </head>
 <body>
-<jsp:include page="navbar.jsp"></jsp:include>
+<jsp:include page="_navbar.jsp"></jsp:include>
+<div class="container-fluid">
 <div class="body">
-	<table id="query">
+
+	<table id="query" class="table">
 		<c:forEach var="results" items="${arrayList }">
 			<tr>
 				<c:forEach var="result" items="${results }">
@@ -21,6 +22,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+</div>
 </div>
 </body>
 </html>

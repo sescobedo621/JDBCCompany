@@ -4,17 +4,37 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="normalize.css">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<title>Simple Select</title>
+<jsp:include page="_style.jsp"></jsp:include>
+<title>Select GUI</title>
 </head>
 <body>
-<jsp:include page="navbar.jsp"></jsp:include>
+<header>
+<jsp:include page="_navbar.jsp"></jsp:include>
+</header>
+<section class="full-bg-img sqlGui">
+       <div class="view">
+       <div class="mask rgba-black-light">
+        <div class="container">
+            <div class="verticalcenter text-center white-text">
+                <h1>MySQL GUI</h1>
+                <h2>Select Queries</h2>
+                <!--Call to action buttons-->
+                <a href="#select" class="btn btn-primary waves-effect waves-light">Select Queries</a>
+                <a href="update.do" class="btn btn-success waves-effect waves-light">Update/Insert/Delete</a>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+<div class="container-fluid" id="select">
 <div class="body">
 		<form method="GET" action="sql.do">
-			<input type="text" name="query" size="100" /><br> <input type="submit"
-				value="Search Query" />
+			<div class="form-group">
+				<input type="text" name="query" class="form-control" placeholder="Select Query" />
+			</div>
+			 <input type="submit" value="Search Query" class="btn btn-primary" />
 		</form>
+</div>
 </div>
 </body>
 </html>
