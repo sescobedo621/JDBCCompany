@@ -7,27 +7,92 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="normalize.css">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<jsp:include page="_style.jsp"></jsp:include>
 <title>Update Employee</title>
 </head>
 <body>
-<jsp:include page="navbar.jsp"></jsp:include>
+<header>
+	<jsp:include page="_navbar.jsp"></jsp:include>
+</header>
+<section class="full-bg-img add">
+       <div class="view">
+       <div class="mask rgba-black-light">
+        <div class="container">
+            <div class="verticalcenter text-center white-text" id="add">
+               <a href="#updateEmployee"> <h1>companyRolodex</h1>
+                <h2>Update ${employee.firstName} ${employee.lastName}</h2></a>
+                <!--Call to action buttons-->
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
 <div class="body">
-	<form method="POST" action="updateEmployee.do">
-		<input type="hidden" name="id" value="${employee.id }">First Name: <input
-			type="text" name="firstName" value="${employee.firstName }" /> <br>Middle Name: <input
-			type="text" name="middleName" value="${employee.middleName }"/> <br>Last Name:<input
-			type="text" name="lastName" value="${employee.lastName }" /><br>
-			Salary: <input type="text" name="salary" value="${employee.salary }"> <br>
-			Street Address: <input type="text" name="address" value="${employee.address }"/>
-			City: <input type="text" name="city" value="${employee.city }"/>
-			</select>
-			<br>zipcode:
-			<input type="text" name="zipcode" value="${employee.zipcode}"/>
-			<input type="submit" value="Update Employee"/>
+<div class="container-fluid">
+
+	<form method="POST" action="updateEmployee.do" id="updateEmployee">
+		<input type="hidden" name="id" value="${employee.id }">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">First Name:</label> 
+			<div class="col-sm-10">
+				<input type="text" name="firstName" class="form-control" value="${employee.firstName }"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Middle Name:</label>
+			<div class="col-sm-10">
+			 	<input type="text" name="middleName" class="form-control" value="${employee.middleName }" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Last Name:</label>
+			<div class="col-sm-10">
+				<input type="text" name="lastName" class="form-control" value="${employee.lastName }"/>
+			</div>
+		</div>
+		<div class="form-group">
+    		<label class="col-sm-2 control-label">Salary (Annually)</label>
+    		<div class="col-sm-10">
+    			<div class="row">
+    				<div class="col-xs-2">$</div>
+    				<div class="col-xs-10">
+      					<input type="text" class="form-control" name="salary" value="${employee.salary }">
+      				</div>
+      			</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Address: </label>
+			<div class="col-sm-10">
+				<input type="text" name="address" class="form-control" value="${employee.address }"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">City:</label> 
+			<div class="col-sm-10">
+				<div class="row">
+					<div class="col-sm-6">
+						<input type="text" name="city" class="form-control" value="${employee.city }"/>
+					</div>
+					<div class="col-sm-6">
+						<label  class="col-sm-2 control-label">State:</label>
+						<div class="col-sm-10">
+						<input type="text" name="state" class="form-control" value="${employee.state }"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Zipcode:</label>
+				<div class="col-sm-10">
+					<input type="text" name="zipcode" class="form-control" value="${employee.zipcode }"/>
+				</div>
+			</div>
+			<input type="submit" value="Update Employee" class="btn btn-primary"/>
 
 	</form>
+</div>
 </div>
 </body>
 </html>
