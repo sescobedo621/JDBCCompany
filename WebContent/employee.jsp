@@ -31,6 +31,14 @@
 			<label>Address:</label> <address>${employee.address}<br> ${employee.city},
 			${employee.state} ${employee.zipcode}</address>
 		</p>
+		<div class="row">
+		<div class="col-sm-2">
+		<a href="updateEmployee.do?id=${employee.id}" class="btn btn-primary">UPDATE</a>
+		</div>
+		<div class="col-sm-2">
+		<form action="deleteEmployee.do" method="POST" id="delete"><input type="hidden" name="id" value ="${employee.id}"><input type="submit" value="DELETE" class="btn btn-primary"></form>
+		</div>
+		</div>
 </div>
 	</div>
 	</div>
