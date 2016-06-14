@@ -35,7 +35,7 @@ body{
 	postiion: fixed;
 	display: block;
 }
-#updateBeg a{
+#updateBeg a, #add a{
 	color: white;
 }
 #employeesPic{
