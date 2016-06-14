@@ -136,10 +136,9 @@ public class EmployeesDAO {
 	public void addEmployee(Employee emp)
 	{
 		employees.add(emp);
-		emp.setSalary(15000.00);
 		String sqltxt = "INSERT INTO employees(id, firstname, lastname, middlename, salary, address, city, state, zipcode) VALUES ("
 				+ emp.getId() + ", '" + emp.getFirstName() + "', '" + emp.getLastName() + "', '" + emp.getMiddleName()
-				+ "', 15000.00, '" + emp.getAddress() + "', '" + emp.getCity() + "', '" + emp.getState() + "', "
+				+ emp.getSalary() + emp.getAddress() + "', '" + emp.getCity() + "', '" + emp.getState() + "', "
 				+ emp.getZipcode() + ");";
 		int num = update(sqltxt);
 	}
