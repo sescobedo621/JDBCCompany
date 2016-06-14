@@ -138,7 +138,7 @@ public class EmployeesDAO {
 		employees.add(emp);
 		String sqltxt = "INSERT INTO employees(id, firstname, lastname, middlename, salary, address, city, state, zipcode) VALUES ("
 				+ emp.getId() + ", '" + emp.getFirstName() + "', '" + emp.getLastName() + "', '" + emp.getMiddleName()
-				+ emp.getSalary() + emp.getAddress() + "', '" + emp.getCity() + "', '" + emp.getState() + "', "
+				+ emp.getSalary() + emp.getAddress() + "', \"" + emp.getCity() + "\", '" + emp.getState() + "', "
 				+ emp.getZipcode() + ");";
 		int num = update(sqltxt);
 	}
@@ -168,7 +168,7 @@ public class EmployeesDAO {
 			employees.set(number, emp);
 			String sqltxt = "UPDATE employees SET firstname= '" + emp.getFirstName() + "', middlename= '"
 					+ emp.getMiddleName() + "', lastname= '" + emp.getLastName() + "', salary= " + emp.getSalary()
-					+ ", address= '" + emp.getAddress() + "', city= '" + emp.getCity() + "', zipcode= "
+					+ ", address= '" + emp.getAddress() + "', city= \"" + emp.getCity() + "\", zipcode= "
 					+ emp.getZipcode() + " WHERE id =" + emp.getId();
 			System.out.println(sqltxt);
 			int num = update(sqltxt);
